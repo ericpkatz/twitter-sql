@@ -14,6 +14,10 @@ form button {
   margin-top: 10px;
 }
 
+form input {
+  width: 100%;
+}
+
 ul li {
   border-bottom: solid 1px black;
 }
