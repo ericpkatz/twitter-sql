@@ -9,10 +9,10 @@ files:
   server.js (approx 50 lines)
     GET '/'
     GET '/:username'
-    POST '/' routes
+    POST '/' creates a tweet 
 
-  db.js (approx 100 lines)
-    sync(cb) - creates tables
+  db.js (approx 100 lines - closer to 75 without sync)
+    sync(cb) - creates tables (needed for deployment)
     getTweets(username, callback);
       - username is optional - if not passed return all tweets
     createTweet(username, content, cb);
