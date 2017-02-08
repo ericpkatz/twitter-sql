@@ -1,0 +1,46 @@
+<html>
+  <head>
+    <link rel='stylesheet' href='/public/styles.css' />
+  </head>
+  <body>
+    <h1>Minimal Tweet Bank</h1>
+        <pre>
+files: 
+  server.js (approx 50 lines)
+    GET '/'
+    GET '/:username'
+    POST '/' routes
+
+  db.js (approx 100 lines)
+    sync(cb) - creates tables
+    getTweets(username, callback);
+      - username is optional - if not passed return all tweets
+    createTweet(username, content, cb);
+
+  views/index.html (approx 40 lines);
+
+  public/styles.css (approx 10 lines);
+
+        </pre>
+    <form action='/' method='POST'>
+      <div>
+        <label>User</label>
+        <br />
+        <input type='text' name='name' value="{{ name }}"/>
+      </div>
+      <div>
+        <label>Tweet</label>
+        <br />
+        <input type='text' name='content' />
+      </div>
+      <div>
+        <button type='submit'>Save</button>
+      </div>
+    </form>
+    <ul>
+      {% for tweet in tweets %}
+      <li>{{ tweet.content }} by <a href='/{{tweet.name}}'>{{ tweet.name }} {{ tweet.user_id }}</a></li>
+      {% endfor %}
+    </ul>
+  </body>
+ </html>

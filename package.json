@@ -1,0 +1,23 @@
+{
+  "name": "twitter-sql",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "DATABASE_URL=postgres://localhost/twitter_sql_test nodemon ./node_modules/mocha/bin/mocha",
+    "start:dev": "DATABASE_URL=postgres://localhost/twitter_sql nodemon server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.16.0",
+    "express": "^4.14.1",
+    "pg": "^6.1.2",
+    "swig": "^1.4.2"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^3.2.0"
+  }
+}
